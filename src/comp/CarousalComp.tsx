@@ -27,7 +27,7 @@ export function CarousalComp() {
       <CarouselContent>
         {heroImages.map((hero) => (
           <CarouselItem key={hero.key}>
-            <div className="p-1">
+            <div >
               <Card>
                 <CardContent className="flex aspect-square items-center justify-center p-6">
                 <Image src={hero.imgurl} alt={hero.alt} height={100} width={1000}/>
