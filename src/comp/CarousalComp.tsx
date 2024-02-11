@@ -1,7 +1,8 @@
 "use client"
 import * as React from "react"
 import Autoplay from "embla-carousel-autoplay"
- 
+import { heroImages } from "../app/constant"
+
 import { Card, CardContent } from "@/components/ui/card"
 import {
   Carousel,
@@ -9,6 +10,7 @@ import {
   CarouselItem,
  
 } from "@/components/ui/carousel"
+import Image from "next/image"
  
 export function CarousalComp() {
   const plugin = React.useRef(
@@ -23,12 +25,12 @@ export function CarousalComp() {
       onMouseLeave={plugin.current.reset}
     >
       <CarouselContent>
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index}>
+        {heroImages.map((hero) => (
+          <CarouselItem key={hero.key}>
             <div className="p-1">
               <Card>
                 <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <span className="text-4xl font-semibold">{index + 1}</span>
+                <Image src={hero.imgurl} alt={hero.alt} height={100} width={1000}/>
                 </CardContent>
               </Card>
             </div>
