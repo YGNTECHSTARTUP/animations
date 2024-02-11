@@ -1,37 +1,28 @@
-/* eslint-disable tailwindcss/classnames-order */
-import Link from 'next/link'
+
 import React from 'react'
 import { ModeToggle } from '@/components/ui/toggle'
 import { UserButton,} from "@clerk/nextjs";
 import { dark } from '@clerk/themes';
-import MobNav from './MobNav';
-// import Image from 'next/image'
-// import ygn from '../assets/images/site-logo.svg'
+
 import Searchheader from './Searchheader';
 import Logo from './Logo';
-// import { Button } from '@/components/ui/button';
+
 const Navbar = () => {
   return (
   
-  <nav className='flex bg-primary-foreground justify-between  h-16 p-2 border-2   border-ring border-indigo-400 fixed z-50 w-full sm:px-12  '>
-    <ul className='flex justify-start ml-12'>
+  <nav className='fixed z-50 flex  h-16 w-full justify-between   border-2 border-indigo-400 border-ring bg-primary-foreground p-2 sm:px-12  '>
+    <ul className='ml-12 flex justify-start'>
     <li className='p-2 opacity-100'>
     <Logo/>
       </li>
 
-      {/* 
-        <Link className='flex -ml-11 ' href={'/'}>
-        <Image alt="ygn" height={26} width={26} src={ygn} className=' contrast-100'/>
-          <span className=' text-3xl   font-sans font-extrabold  bg-gradient-to-bl from-gray-900 via-[#7f51c1fc] to-slate-900 bg-clip-text text-transparent '>
-          Ygn  </span>
-          <span className='mt-2  text-xl font-sans font-extrabold bg-gradient-to-bl from-gray-900 via-[#895cc9fc] to-slate-900 bg-clip-text text-transparent'>Discussions</span></Link>
-      </li> */}
+     
      
     </ul>
-    <div className='hidden mt-2 sm:block '>
+    <div className='mt-2 hidden sm:block '>
       <Searchheader/>
     </div>
-    <div className=' flex space-x-4  mt-[5px]' >
+    <div className=' mt-[5px] flex  space-x-4' >
     <ModeToggle/>
    <div className=' outline-primary '>
    <UserButton  appearance={{
@@ -39,9 +30,7 @@ const Navbar = () => {
       }} afterSignOutUrl='/'/>
  
    </div>
- <div>
- <MobNav/>
-  </div>  
+
     
    
     </div>

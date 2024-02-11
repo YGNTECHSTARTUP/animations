@@ -54,7 +54,7 @@ export default function RootLayout({
 
 <html lang="en " className={`${GeistSans.variable} ${GeistMono.variable}`}>
 
-<body className=' selection:text-regalpurple selection:bg-primary bg-background' >
+<body className=' bg-background selection:bg-primary selection:text-regalpurple' >
   <ThemeProvider  attribute="class"
             defaultTheme="system"
             enableSystem

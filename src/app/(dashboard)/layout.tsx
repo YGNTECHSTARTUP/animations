@@ -1,6 +1,6 @@
-import LeftSidebar from "@/comp/LeftSidebar"
+// import LeftSidebar from "@/comp/LeftSidebar"
 import Navbar from "@/comp/Navbar"
-import RightSidebar from "@/comp/RightSidebar"
+// import RightSidebar from "@/comp/RightSidebar"
 import { ThemeProvider } from "@/components/Theme-Provider"
 import { GeistMono } from "geist/font/mono"
 import { GeistSans } from "geist/font/sans"
@@ -24,16 +24,7 @@ export default function RootLayout({
               disableTransitionOnChange>
     <Navbar/>
 <div className="flex   " >
-<div className="basis-[14%]">
-    <LeftSidebar/>
-    </div>
-  <div className="grow">
-  {children}
-  </div>
-   
-    <div className="max-lg:hidden lg:shrink lg:basis-[17%]">
-    <RightSidebar/>
-    </div>
+{children}
 </div>
     
    
