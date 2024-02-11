@@ -1,7 +1,7 @@
 import { MoveRight } from "lucide-react";
 import { CarousalComp } from "@/comp/CarousalComp";
 import Searchheader from "@/comp/Searchheader";
-import { Button } from "@/components/ui/button";
+
 export default function Home() {
   return (
     <>
