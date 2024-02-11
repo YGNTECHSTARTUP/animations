@@ -23,7 +23,7 @@ export default function RootLayout({
               enableSystem
               disableTransitionOnChange>
     <Navbar/>
-<div className="flex   " >
+<div className="flex " >
 {children}
 </div>
     
