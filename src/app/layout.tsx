@@ -8,6 +8,7 @@ import { dark, neobrutalism} from '@clerk/themes';
 import React from 'react'
 import { ThemeProvider } from '@/components/Theme-Provider';
 import './globals.css'
+import CardComp from '@/comp/CardComp';
 // import Navbar from '@/comp/Navbar';
 // import LeftSidebar from '@/comp/LeftSidebar';
 
@@ -60,6 +61,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange>
   {children}
+  <CardComp/>
   </ThemeProvider>
 
   </body>
