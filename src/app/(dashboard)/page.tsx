@@ -1,6 +1,7 @@
 import { MoveRight } from "lucide-react";
 import { CarousalComp } from "@/comp/CarousalComp";
 import Searchheader from "@/comp/Searchheader";
+import CardComp from "@/comp/CardComp";
 
 export default function Home() {
   return (
@@ -27,10 +28,10 @@ export default function Home() {
 
     </div>
     
-    <div className="mt-12 flex justify-center">
+    <div className="mt-12 flex cursor-pointer justify-center">
     <CarousalComp/>
     </div>
-    
+    <CardComp/>
 
    </div>
    

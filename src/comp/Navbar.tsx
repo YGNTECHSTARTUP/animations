@@ -1,8 +1,8 @@
 
 import React from 'react'
 import { ModeToggle } from '@/components/ui/toggle'
-import { UserButton,} from "@clerk/nextjs";
-import { dark } from '@clerk/themes';
+// import { UserButton,} from "@clerk/nextjs";
+// import { dark } from '@clerk/themes';
 
 // import Searchheader from './Searchheader';
 import Logo from './Logo';
@@ -25,10 +25,10 @@ const Navbar = () => {
     <div className=' mt-[5px] flex  space-x-4' >
     <ModeToggle/>
    <div className=' outline-primary '>
-   <UserButton  appearance={{
+   {/* <UserButton  appearance={{
         baseTheme: dark,
       }} afterSignOutUrl='/'/>
- 
+  */}
    </div>
 
     
