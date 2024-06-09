@@ -11,7 +11,7 @@ import { useRouter } from 'next/navigation';
 const SearchHeader = () => {
   const router = useRouter();
   const [productUrl, setProductUrl] = useState('');
-
+  const[search,setSearch]=useState('search')
   const handleScrape = async (url: string) => {
     try {
       const productData = await scrapeAmazonsProduct(url);
@@ -38,6 +38,7 @@ const SearchHeader = () => {
   };
 
   const handleScrapeClick = async () => {
+    setSearch("Searching")
     if (!productUrl) {
       alert('Please Enter a Valid Product URL');
       return; // Prevent unnecessary scraping if URL is empty
@@ -72,7 +73,7 @@ const SearchHeader = () => {
                 variant={"default"}
                 onClick={handleScrapeClick}
               >
-                Search
+                {search}
               </Button>
             </div>
           </div>
