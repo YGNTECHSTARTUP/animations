@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 "use client";
-import React, { useState } from 'react';
+import React, { useState,useEffect} from 'react';
 import { Input } from "@/components/ui/input";
 import { Button } from '@/components/ui/button';
 import { scrapeAmazonsProduct } from '@/lib/actions';
@@ -9,9 +9,13 @@ import { useRouter } from 'next/navigation';
 
 
 const SearchHeader = () => {
+
   const router = useRouter();
   const [productUrl, setProductUrl] = useState('');
-  const[search,setSearch]=useState('search')
+  const[search,setSearch]=useState('search     ')
+  // useEffect(()=>{
+  // setSearch('Loading...')
+  // },[search])
   const handleScrape = async (url: string) => {
     try {
       const productData = await scrapeAmazonsProduct(url);
@@ -38,11 +42,12 @@ const SearchHeader = () => {
   };
 
   const handleScrapeClick = async () => {
-    setSearch("Searching")
     if (!productUrl) {
       alert('Please Enter a Valid Product URL');
       return; // Prevent unnecessary scraping if URL is empty
     }
+    setSearch("Searching....")
+
     await handleScrape(productUrl);
   };
 
