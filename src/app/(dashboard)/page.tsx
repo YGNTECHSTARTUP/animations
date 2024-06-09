@@ -1,7 +1,7 @@
 import { MoveRight } from "lucide-react";
 import { CarousalComp } from "@/comp/CarousalComp";
 import Searchheader from "@/comp/Searchheader";
-import CardComp from "@/comp/CardComp";
+// import CardComp from "@/comp/CardComp";
 // import CardComp from "@/comp/CardComp";
 
 export default function Home() {
@@ -37,13 +37,13 @@ export default function Home() {
    
 
    </div>
-   <div className="-mt-72 min-h-screen min-w-full flex-row items-center justify-center">
+   {/* <div className="-mt-72 min-h-screen min-w-full flex-row items-center justify-center">
    <div className='text-4xl font-extrabold text-primary hover:underline'>
           Trending Products
         </div>
    <CardComp/>
 
-   </div>
+   </div> */}
   
     </div>
     

@@ -5,7 +5,7 @@ import React from 'react'
 import StarsGen from '@/comp/StarsGen'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import CardComp from '@/comp/CardComp'
+// import CardComp from '@/comp/CardComp'
 const page = ({searchParams}:any) => {
   console.log(searchParams)
   const {currency,productAvailability,productImage,productPrice,productReviews,productStars,productTitle,productURL,productdiscountRate} = searchParams
@@ -47,12 +47,12 @@ const page = ({searchParams}:any) => {
 
 </div>
     </div>
-    <div className='lg:-mt-64 xl:-mt-0'>
+    {/* <div className='lg:-mt-64 xl:-mt-0'>
     <div className='text-4xl font-extrabold text-primary underline hover:underline'>
           Trending Products
         </div>
     <CardComp/>
-    </div>
+    </div> */}
     </div>
    
   )
