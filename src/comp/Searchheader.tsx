@@ -67,7 +67,7 @@ const SearchHeader = () => {
                 type="search"
                 id="default-search"
                 className="block rounded-sm border-2 border-regalpurple bg-muted p-4 ps-10 text-sm text-muted-foreground ring-2 focus:border-regalpurple focus:ring-4 focus:ring-regalpurple focus:ring-offset-2"
-                placeholder="Pase Your Amazon Product Url"
+                placeholder="Paste Your Amazon Product Url here"
                 onChange={(e) => setProductUrl(e.target.value)}
                 required
               />
