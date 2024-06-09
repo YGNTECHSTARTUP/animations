@@ -13,7 +13,17 @@ interface Imagee {
   imgurl: string;
   alt:string
 }
-
+export interface ProductData {
+  productTitle: string;
+  productPrice: string;
+  productAvailability: boolean;
+  productURL: string;
+  productImage: string;
+  productdiscountRate: number;
+  productReviews: number;
+  productStars: string;
+  currency: string;
+}
 export const heroImages: Imagee[] = [
   { key: "key1", imgurl: "/assetsx/apple_vision_pros.png", alt: "Apple Vision Pros" },
   // { key: "key2", imgurl: "/assetsx/book.png", alt: "Book" },

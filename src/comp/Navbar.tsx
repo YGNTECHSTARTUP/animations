@@ -1,3 +1,4 @@
+/* eslint-disable tailwindcss/no-contradicting-classname */
 
 import React from 'react'
 import { ModeToggle } from '@/components/ui/toggle'
@@ -10,7 +11,7 @@ import Logo from './Logo';
 const Navbar = () => {
   return (
   
-  <nav className='fixed z-50 flex  h-16 w-full justify-between    border-2 border-indigo-400 border-ring bg-primary-foreground p-2 sm:px-12  '>
+  <nav className='fixed z-50 flex  h-16 w-full justify-between top-0   border-b-2 border-indigo-400 border-ring bg-primary-foreground p-2 sm:px-12  '>
     <ul className='ml-12 flex justify-start'>
     <li className='p-2 opacity-100'>
     <Logo/>

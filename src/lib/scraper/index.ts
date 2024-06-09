@@ -1,10 +1,11 @@
 "use server"
 import axios from "axios";
 import * as cheerio from "cheerio";
-import { extractCurrency, extractPrice } from "../utils";
-
+import { ProductData } from "@/app/constant";
 export async function scrapeAmazonProduct(productURL: string) {
   if (!productURL) return;
+
+
 
   const username: string = "brd-customer-hl_d99e8d19-zone-pricify"
   const password: string = "nz19jzn288ia"
@@ -25,7 +26,7 @@ export async function scrapeAmazonProduct(productURL: string) {
     // console.log(res.data)
      const $ = cheerio.load(res.data)
      const title = $('#productTitle').text().trim();
-     const currentprice = $('.priceToPay span.a-price-whole')
+     const currentprice = $('.priceToPay span.a-price-whole').text().trim();
     
      const outOfStock = $('#availability span').text().trim().toLowerCase() === 'currently unavailable'
      const images = $("#landingImage").attr("data-a-dynamic-image") || "{}";
@@ -37,15 +38,15 @@ export async function scrapeAmazonProduct(productURL: string) {
        .replace(/[\D]/g, "");
      const stars = $(".AverageCustomerReviews").text().slice(0, 3);
      console.log(title,currentprice,outOfStock,images,productImageURLs,discountRate,reviewCount)
-     const productData = {
+     const productData:ProductData = {
       productTitle:title,
-      productPrice:Number(currentprice),
+      productPrice:currentprice,
       productAvailability:!outOfStock,
       productURL,
       productImage:productImageURLs[6],
       productdiscountRate:Number(discountRate),
       productReviews:Number(reviewCount),
-      productStars:Number(stars),
+      productStars:stars,
       currency:"₹",
      }
      return productData

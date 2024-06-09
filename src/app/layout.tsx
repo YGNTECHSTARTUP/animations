@@ -8,6 +8,7 @@ import {GeistMono} from "geist/font/mono"
 import React from 'react'
 import { ThemeProvider } from '@/components/Theme-Provider';
 import './globals.css'
+import Navbar from '@/comp/Navbar';
 // import CardComp from '@/comp/CardComp';
 // import Navbar from '@/comp/Navbar';
 // import LeftSidebar from '@/comp/LeftSidebar';
@@ -60,6 +61,8 @@ export default function RootLayout({
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange>
+                  <Navbar/>
+
   {children}
   {/* <CardComp/> */}
   </ThemeProvider>
