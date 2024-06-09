@@ -27,12 +27,14 @@ export interface ProductData {
 export const heroImages: Imagee[] = [
   { key: "key1", imgurl: "/assets/apple_vision_pros.png", alt: "Apple Vision Pros" },
   // { key: "key2", imgurl: "/assets/book.png", alt: "Book" },
-  { key: "key3", imgurl: "/assets/Macbook.png", alt: "Macbook" },
-  // { key: "key4", imgurl: "/assets/mobile.png", alt: "Mobile" },
-  { key: "key5", imgurl: "/assets/mobile2.png", alt: "Mobile 2" },
-  { key: "key6", imgurl: "/assets/Playstation.png", alt: "Playstation" },
   { key: "key7", imgurl: "/assets/sony tv.png", alt: "Sony TV" },
-  { key: "key8", imgurl: "/assets/watch.png", alt: "Watch" },
+  { key: "key8", imgurl: "/assets/iphone.png", alt: "Iphone" },
+  { key: "key3", imgurl: "/assets/Macbook.png", alt: "Macbook" },
+  { key: "key6", imgurl: "/assets/Playstation.png", alt: "Playstation" },
+  // { key: "key4", imgurl: "/assets/mobile.png", alt: "Mobile" },
+  { key: "key5", imgurl: "/assets/watch.png", alt: "Watch" },
+
+ 
   // Add more objects as needed
 ];
 
