@@ -6,16 +6,7 @@ import StarsGen from '@/comp/StarsGen'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import CardComp from '@/comp/CardComp'
-const page = ({searchParams}:{
-  currency:string,
-  productAvailability:boolean,
-  productImage:string,
-  productPrice:string,
-  productReviews:string,
-  productStars:string,
-  productTitle:string,
-  productURL:string,
-  productdiscountRate:string}) => {
+const page = ({searchParams}:any) => {
   console.log(searchParams)
   const {currency,productAvailability,productImage,productPrice,productReviews,productStars,productTitle,productURL,productdiscountRate} = searchParams
  console.log(currency)
