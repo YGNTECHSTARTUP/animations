@@ -10,10 +10,10 @@ export async function scrapeAmazonProduct(productURL: string) {
   const username: string = "brd-customer-hl_d99e8d19-zone-pricify"
   const password: string = "nz19jzn288ia"
   const port: number = 22225;
-  const session_id = (10000 * Math.random()) | 0;
+  const SessionId = (10000 * Math.random()) | 0;
   const options = {
     auth: {
-      username: `${username}-session-${session_id}`,
+      username: `${username}-session-${SessionId}`,
       password,
     },
     host: "brd.superproxy.io",

@@ -6,17 +6,7 @@ import { Button } from '@/components/ui/button';
 import { scrapeAmazonsProduct } from '@/lib/actions';
 import { useRouter } from 'next/navigation';
 
-interface ProductData {
-  currency: string;
-  productAvailability: string;
-  productImage: string;
-  productPrice: number;
-  productReviews: string;
-  productStars: number;
-  productTitle: string;
-  productURL: string;
-  productdiscountRate?: number; // Optional property for discount rate
-}
+
 
 const SearchHeader = () => {
   const router = useRouter();
