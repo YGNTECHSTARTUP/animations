@@ -7,8 +7,8 @@ export async function scrapeAmazonProduct(productURL: string) {
 
 
 
-  const username = process.env.BRIGHT_DATA_USERNAME
-  const password = process.env.BRIGHT_DATA_PASSWORD
+  const username = "brd-customer-hl_d99e8d19-zone-pricify"
+  const password = "nz19jzn288ia"
   const port: number = 22225;
   const SessionId = (10000 * Math.random()) | 0;
   const options = {
