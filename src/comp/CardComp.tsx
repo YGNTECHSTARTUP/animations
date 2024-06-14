@@ -33,8 +33,8 @@ const CardComp: React.FC<CardCompProps> = ({ data }) => {
               productdiscountRate: product.discountRate,
             },
           }
-        }>
-        <Card key={product.id}>
+        } key={product.id}>
+        <Card >
           <CardContent className="flex aspect-square items-center justify-center p-6">
             <Image
               src={product.image}
