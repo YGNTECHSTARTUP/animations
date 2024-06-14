@@ -14,6 +14,7 @@ interface Imagee {
   alt:string
 }
 export interface ProductData {
+  
   productTitle: string;
   productPrice: string;
   productAvailability: boolean;
@@ -22,6 +23,18 @@ export interface ProductData {
   productdiscountRate: number;
   productReviews: number;
   productStars: string;
+  currency: string;
+}
+export interface ProductDatas {
+  title: string | null;
+  id: number;
+  availability: boolean;
+  url: string;
+  image: string;
+  discountRate: number;
+  reviews: number;
+  stars: string;
+  price: string;
   currency: string;
 }
 export const heroImages: Imagee[] = [

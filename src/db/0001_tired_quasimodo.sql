@@ -1,0 +1,1 @@
+ALTER TABLE "schema" RENAME TO "data";

@@ -5,6 +5,8 @@ import React from 'react'
 import StarsGen from '@/comp/StarsGen'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+import CardComp from '@/comp/CardComp'
+import Cardss from '@/comp/Cardss'
 // import CardComp from '@/comp/CardComp'
 const page = ({searchParams}:any) => {
   console.log(searchParams)
@@ -13,7 +15,7 @@ const page = ({searchParams}:any) => {
   if(currency === '') return <Error404/>
   return (
     <div>
- <div className='mt-28 min-h-screen min-w-full flex-row justify-center    overflow-hidden sm:mt-4 md:mt-28 lg:mt-[10%] lg:flex'>
+ <div className='mt-28  min-w-full flex-row justify-center    overflow-hidden sm:mt-4 md:mt-28 lg:mt-[10%] lg:flex'>
 <Card className='flex h-[5%]  w-full md:mx-auto md:w-[59%] lg:m-[1%] lg:w-2  lg:grow' >
   <CardContent>
     <Image src={productImage} alt={productTitle} width={1080} height={1080}/>
@@ -47,12 +49,12 @@ const page = ({searchParams}:any) => {
 
 </div>
     </div>
-    {/* <div className='lg:-mt-64 xl:-mt-0'>
+    <div className=''>
     <div className='text-4xl font-extrabold text-primary underline hover:underline'>
           Trending Products
         </div>
-    <CardComp/>
-    </div> */}
+<Cardss/>
+    </div>
     </div>
    
   )

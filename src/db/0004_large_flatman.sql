@@ -1,0 +1,1 @@
+ALTER TABLE "data" ADD CONSTRAINT "data_title_unique" UNIQUE("title");

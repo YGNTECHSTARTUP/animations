@@ -1,13 +1,11 @@
 /* eslint-disable no-undef */
 "use client";
-import React, { useState,useEffect} from 'react';
+import React, { useState} from 'react';
 import { Input } from "@/components/ui/input";
 import { Button } from '@/components/ui/button';
 import { scrapeAmazonsProduct } from '@/lib/actions';
 import { useRouter } from 'next/navigation';
-
-
-
+import { createData } from '@/db/scripts/createData';
 const SearchHeader = () => {
 
   const router = useRouter();
@@ -19,7 +17,9 @@ const SearchHeader = () => {
   const handleScrape = async (url: string) => {
     try {
       const productData = await scrapeAmazonsProduct(url);
+      
       if (productData) {
+        createData(productData)
         console.log('Product Details:', productData);
         const query = new URLSearchParams({
           currency: productData.currency,

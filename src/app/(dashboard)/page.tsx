@@ -1,13 +1,18 @@
 import { MoveRight } from "lucide-react";
 import { CarousalComp } from "@/comp/CarousalComp";
 import Searchheader from "@/comp/Searchheader";
+import CardComp from "@/comp/CardComp";
+import { selectData } from "@/db/scripts/selectData";
+import Cardss from "@/comp/Cardss";
 // import CardComp from "@/comp/CardComp";
 // import CardComp from "@/comp/CardComp";
 
-export default function Home() {
+export default  function Home() {
+
+  
   return (
     <div>
-   <div className=" mt-[25%] min-h-screen w-full flex-row  overflow-hidden      lg:mt-[10%] xl:flex xl:justify-evenly">
+   <div className=" mt-[25%]  w-full flex-row  overflow-hidden      lg:mt-[10%] xl:flex xl:justify-evenly">
     <div className="">
     <div className="flex-row  text-primary min-[765px]:ml-28 min-[765px]:basis-[80%] xl:basis-[50%]">
     <div className='flex gap-2 font-mono font-semibold  text-violet-950 dark:text-violet-200'>
@@ -35,15 +40,17 @@ export default function Home() {
    
 
    
-
+ 
    </div>
-   {/* <div className="-mt-72 min-h-screen min-w-full flex-row items-center justify-center">
-   <div className='text-4xl font-extrabold text-primary hover:underline'>
+   <div className="-mt-72 min-h-screen min-w-full flex-row items-center justify-center">
+   <div className='mt-72 text-4xl font-extrabold text-primary hover:underline '>
           Trending Products
         </div>
-   <CardComp/>
 
-   </div> */}
+<Cardss/>
+{/* /   <Test/> */}
+
+   </div>
   
     </div>
     
