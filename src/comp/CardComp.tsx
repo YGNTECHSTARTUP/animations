@@ -1,20 +1,21 @@
-"use client"
 import React from 'react'
 import { Card, CardContent } from '@/components/ui/card'
 import Image from 'next/image'
 import { ProductDatas } from '@/app/constant'
 import Link from 'next/link'
+import { StaticImport } from 'next/dist/shared/lib/get-img-props'
+import { db } from '@/db/db'
+import { Data } from '@/db/schema'
 
 // Define the props interface for better type checking
-interface CardCompProps {
-  data: ProductDatas[];
+
+export async function selectData() {
+  const data = await db.select().from(Data)
+  return data
 }
-
-const CardComp: React.FC<CardCompProps> = ({ data }) => {
-  if (!data || data.length === 0) {
-    return <div>No data found</div>;
-  }
-
+export const dynamic ="force-dynamic"
+const CardComp: React.FC = async() => {
+  const data = await selectData()
   return (
     <div className='grid grid-cols-1 gap-10 p-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5'>
       {data.map((product) => (
