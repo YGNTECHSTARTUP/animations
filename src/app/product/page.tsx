@@ -6,7 +6,6 @@ import StarsGen from '@/comp/StarsGen'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import CardComp from '@/comp/CardComp'
-import Cardss from '@/comp/Cardss'
 // import CardComp from '@/comp/CardComp'
 const page = ({searchParams}:any) => {
   console.log(searchParams)
@@ -53,7 +52,7 @@ const page = ({searchParams}:any) => {
     <div className='text-4xl font-extrabold text-primary underline hover:underline'>
           Trending Products
         </div>
-<Cardss/>
+<CardComp/>
     </div>
     </div>
    

@@ -2,8 +2,6 @@ import { MoveRight } from "lucide-react";
 import { CarousalComp } from "@/comp/CarousalComp";
 import Searchheader from "@/comp/Searchheader";
 import CardComp from "@/comp/CardComp";
-import { selectData } from "@/db/scripts/selectData";
-import Cardss from "@/comp/Cardss";
 // import CardComp from "@/comp/CardComp";
 // import CardComp from "@/comp/CardComp";
 
@@ -47,7 +45,7 @@ export default  function Home() {
           Trending Products
         </div>
 
-<Cardss/>
+<CardComp/>
 {/* /   <Test/> */}
 
    </div>
